@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -59,21 +59,33 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        "slideIn": {
-          '0%': {
-            opacity: '0', transform: 'translate(0, -4px)', display: 'flex', visibility: 'visible'
+        slideIn: {
+          "0%": {
+            opacity: "0",
+            transform: "translate(0, -4px)",
+            display: "flex",
+            visibility: "visible",
           },
-          '100%': {
-            opacity: '1', transform: 'translate(0, 0)', display: 'flex', visibility: 'visible'
-          }
+          "100%": {
+            opacity: "1",
+            transform: "translate(0, 0)",
+            display: "flex",
+            visibility: "visible",
+          },
         },
-        "slideOut": {
-          '0%': {
-            opacity: '1', transform: 'translate(0, 0px)', display: 'flex', visibility: 'visible'
+        slideOut: {
+          "0%": {
+            opacity: "1",
+            transform: "translate(0, 0px)",
+            display: "flex",
+            visibility: "visible",
           },
-          '100%': {
-            opacity: '0', transform: 'translate(0, -4px)', display: 'none', visibility: 'hidden'
-          }
+          "100%": {
+            opacity: "0",
+            transform: "translate(0, -4px)",
+            display: "none",
+            visibility: "hidden",
+          },
         },
         "accordion-down": {
           from: { height: "0" },
@@ -85,14 +97,14 @@ const config = {
         },
       },
       animation: {
-        "slideIn": "slideIn 500ms forwards",
-        "slideOut": "slideOut 500ms forwards",
+        slideIn: "slideIn 500ms forwards",
+        slideOut: "slideOut 500ms forwards",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

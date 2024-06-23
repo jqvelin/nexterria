@@ -46,7 +46,7 @@ const Cart = () => {
                   width={0}
                   height={0}
                   className="w-16 sm:w-24 md:w-32"
-                  alt="preview"
+                  alt={item.title}
                 />
                 <div className="flex flex-col items-start">
                   <h3 className="font-bold text-xl md:text-2xl">{`${item.title}, ${pizzaLocales.get('sizes')?.get(item.size)}, ${pizzaLocales.get('dough')?.get(item.dough)} тесто (${item.amount})`}</h3>

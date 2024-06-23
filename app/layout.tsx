@@ -5,8 +5,6 @@ import { Comfortaa } from "next/font/google";
 import Header from "@/components/Header";
 import StoreProvider from "@/components/StoreProvider";
 import { Toaster } from "@/components/ui/toaster";
-import Image from "next/image";
-import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -24,13 +22,15 @@ const comfortaa = Comfortaa({
 const RootLayout = ({ children }: { children: Readonly<ReactNode> }) => {
   return (
     <html className={comfortaa.className}>
-      <body className="min-h-screen bg-gradient-to-b from-orange-50 via-orange-100 to-orange-200 flex flex-col justify-center items-center pt-24 pb-4">
+      <body className="min-h-screen">
+        <div className="h-full bg-gradient-to-b from-orange-50 via-orange-100 to-orange-200 flex flex-col justify-center items-center pt-24 pb-4">
         <StoreProvider>
           <Header />
           {children}
         </StoreProvider>
-        <Toaster />
         <Footer />
+        </div>
+        <Toaster />
       </body>
     </html>
   );

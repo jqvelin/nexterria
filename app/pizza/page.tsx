@@ -1,3 +1,5 @@
+import Filter from "@/components/Filter";
+import Search from "@/components/Search";
 import ProductCatalog from "@/components/products/ProductCatalog";
 
 const page = async ({
@@ -5,7 +7,11 @@ const page = async ({
 }: {
   searchParams: { [key: string]: string };
 }) => {
-  return <ProductCatalog productCategory="pizza" searchParams={searchParams} />;
+  return <>
+    <Filter sortBy={searchParams.sortBy}/>
+    <Search />
+    <ProductCatalog productCategory="pizza" searchParams={searchParams} />
+  </>
 };
 
 export default page;

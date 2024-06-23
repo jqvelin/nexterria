@@ -4,6 +4,7 @@ import { IProduct } from "../../types";
 import { addToCart } from "@/lib/state/cartSlice";
 import { toast } from "./use-toast";
 import { pizzaLocales } from "@/lib/utils/toLocale";
+import Link from "next/link";
 
 const PurchaseButton = ({
   product,
@@ -12,7 +13,10 @@ const PurchaseButton = ({
 }) => {
   const dispatch = useAppDispatch();
   function handleAddToCart() {
-    toast({title: 'Товар добавлен в корзину!', description: `${product.title} (${pizzaLocales.get('sizes')?.get(product.size)}, ${pizzaLocales.get('dough')?.get(product.dough)} тесто)`})
+    toast({title: 'Товар добавлен в корзину!', 
+      description: `${product.title} (${pizzaLocales.get('sizes')?.get(product.size)}, ${pizzaLocales.get('dough')?.get(product.dough)} тесто)`, 
+      action: <Link href='/cart' className="bg-orange-600 px-4 py-2 rounded-full text-white">Корзина</Link>
+    })
     dispatch(addToCart(product));
   }
   return (

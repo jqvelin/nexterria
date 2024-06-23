@@ -13,7 +13,7 @@ const Header = () => {
     <header className="fixed z-10 top-4 h-14 md:h-16 w-11/12 pl-6 pr-6 rounded-xl bg-white flex items-center justify-between shadow-md">
       <Link href="/" className="flex items-center gap-2">
         <Image
-          src="/icon.png"
+          src="/logos/nexterria.png"
           height={0}
           width={0}
           sizes="100vw"

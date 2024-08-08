@@ -15,15 +15,15 @@ export const pages = [
 
 export const pizzaSearchFilters = [
   {
-    name: "популярности",
+    name: "по популярности",
     href: "/pizza?sortBy=relevance",
   },
   {
-    name: "алфавиту",
+    name: "по алфавиту",
     href: "/pizza?sortBy=alphabet",
   },
   {
-    name: "цене",
+    name: "по цене",
     href: "/pizza?sortBy=price",
   },
 ] as const;

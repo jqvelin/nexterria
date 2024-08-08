@@ -25,7 +25,7 @@ export default function Search() {
   );
   useEffect(() => search(), [searchQuery]);
   return (
-    <div className="w-11/12 bg-white h-10 md:h-12 mb-4 rounded-lg flex items-center pl-6 pr-6 whitespace-nowrap shadow-lg">
+    <div className="w-11/12 bg-white h-10 md:h-12 mb-4 rounded-lg flex items-center pl-6 pr-6 shadow-lg">
       <div className="flex relative font-bold gap-2 cursor-pointer">
         <Image
           src="/icons/magnifying-glass.svg"
@@ -36,7 +36,7 @@ export default function Search() {
         <input
           type="text"
           placeholder="Поиск"
-          className="outline-none"
+          className="outline-none w-[60px]"
           value={searchQuery}
           onChange={(e) => {
             setSearchQuery(e.target.value);

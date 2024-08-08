@@ -8,6 +8,9 @@ const nextConfig = {
                 permanent: true
             }
         ]
+    },
+    images: {
+        domains: ["www.svgrepo.com"]
     }
 };
 

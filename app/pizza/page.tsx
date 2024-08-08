@@ -8,8 +8,10 @@ const page = async ({
   searchParams: { [key: string]: string };
 }) => {
   return <>
-    <Filter sortBy={searchParams.sortBy}/>
+  <div className="flex w-11/12 gap-2">
     <Search />
+    <Filter sortBy={searchParams.sortBy}/>
+  </div>
     <ProductCatalog productCategory="pizza" searchParams={searchParams} />
   </>
 };

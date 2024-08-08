@@ -7,18 +7,23 @@ import { pizzaSearchFilters } from "@/routes";
 const Filter = ({ sortBy }: { sortBy: string }) => {
   const [isDropdownMenuOpen, setIsDropdownMenuOpen] = useState(false);
   return (
-    <div className="w-11/12 bg-white h-10 md:h-12 mb-4 rounded-lg flex items-center pl-6 pr-6 whitespace-nowrap shadow-lg">
+    <div className="w-11/12 bg-white h-10 md:h-12 mb-4 rounded-lg flex items-center pl-6 pr-6 shadow-lg">
       <div
         className="flex relative font-bold gap-1 cursor-pointer"
         onClick={() => setIsDropdownMenuOpen(!isDropdownMenuOpen)}
       >
-        Сортировать по:{" "}
-        <span className="ml-1 underline">
+        <Image
+          src={"https://www.svgrepo.com/show/2287/sort.svg"}
+          width={20}
+          height={20}
+          alt="sort"
+        />
+        <span className="ml-1 underline text-[10px] md:text-[16px]">
           {sortBy === "relevance"
-            ? "популярности"
+            ? "по популярности"
             : sortBy === "alphabet"
-            ? " алфавиту"
-            : "цене"}
+            ? "по алфавиту"
+            : "по цене"}
         </span>
         <Image
           src={"https://www.svgrepo.com/show/80156/down-arrow.svg"}
